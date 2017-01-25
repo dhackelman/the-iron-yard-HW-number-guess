@@ -8,6 +8,8 @@ let userNumbers = []; //fill this value with data from form
 //let's access the form and get teh user-generated value
 let mostRecentGuess = 0;
 const feedackLocation = document.querySelector('.feedback');
+//create counter variable
+let i=5;
 
 
 //create function to test data-type of user-guess
@@ -78,10 +80,7 @@ function pullGuess (){
 };
 
 function updateGuessesLeft () {
-  let gsLft = userNumbers.length;
-  for (let i=5; i<gsLft;i--) {
-    document.querySelector('.guesses-left').innerHTML = gsLeft - i;
-  }
+    document.querySelector('.guesses-left').innerHTML = `${i}`;
 };
 
 //put an eventListener on the FORM, not a field
@@ -91,7 +90,8 @@ inputGuess.addEventListener('submit', () => {
   //prevent console.clear();
   event.preventDefault();
   pullGuess();
-
+  updateGuessesLeft();
+  i--;
 
   inputGuess.reset();
 });
