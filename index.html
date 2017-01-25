@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>JavaScript - Number Guessing Game</title>
+        <link href="https://fonts.googleapis.com/css?family=Arsenal|Open+Sans" rel="stylesheet">
+        <link rel="stylesheet" href="styles/main.css">
+    </head>
+    <body>
+      <header>
+        <h1>Welcome! Make a Guess!</h1>
+      </header>
+      <section class="form-holder">
+        <form class="user-guess" autocomplete="off">
+            <label for="guess">Make a Guess</label>
+            <input type="text" name="guess" id="make-guess" placeholder="between 1 - 100" required>
+            <input type="submit" id="click" value="guess">
+        </form>
+      </section>
+      <section class="computer-feedback">
+        <p>You guessed__<span class="you-guessed">__</span>__.</p>
+        <div class="not-a-winner">
+          <p>Next time you should guess _<span class="feedback">__</span>_.</p>
+          <p>You have _<span class="guesses-left">__</span>_remaining.</p>
+        </div>
+      </section>
+      <script type="text/javascript" src="scripts/main.js"></script>
+  </body>
+</html>
